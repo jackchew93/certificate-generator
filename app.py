@@ -214,7 +214,7 @@ def index():
             <div class="col-md-8">
                 <div class="card shadow-lg border-0 rounded-4">
                     <div class="card-body p-5">
-                        <h2 class="text-center mb-4">🎓 Certificate Generator</h2>
+                        <h2 class="text-center mb-4">🎓 E-CertiGen: A Web-Based Electronic Certificate Generator</h2>
                         <p class="text-center text-muted">
                             Upload a certificate template and a CSV file to generate personalised certificates.
                         </p>
