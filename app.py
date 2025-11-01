@@ -13,7 +13,7 @@ app = Flask(__name__)
 PREVIEW_DIR = None
 
 # ---------------- CONFIG ----------------
-FONT_PATH = r"C:\Windows\Fonts\arialbd.ttf"
+FONT_PATH = "arialbd.ttf"
 EXPORT_PDF = True
 DPI_FOR_PDF = 300
 GOOGLE_DRIVE_TEMPLATE = "https://drive.google.com/drive/folders/1T2iO8yMe5AWCk1UVTLIC9qWADr1JYqDd?usp=drive_link"
@@ -300,4 +300,4 @@ def download_updated_csv():
     return send_file(csv_path, as_attachment=True, download_name="updated_with_serial.csv")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000)
