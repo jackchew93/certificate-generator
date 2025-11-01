@@ -84,7 +84,8 @@ def generate_certificates(template_path, csv_file):
     df = read_csv_with_fallback(csv_file)   # <-- use robust reader
     base = Image.open(template_path).convert("RGB")
 
-    temp_dir = tempfile.mkdtemp()
+    temp_dir = os.path.join(BASE_DIR, "generated_files", datetime.now().strftime("%Y%m%d_%H%M%S"))
+    os.makedirs(temp_dir, exist_ok=True)
     generated_pngs = []
     generated_files = []
 
