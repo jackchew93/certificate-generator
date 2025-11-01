@@ -13,13 +13,8 @@ app = Flask(__name__)
 PREVIEW_DIR = None
 
 # ---------------- CONFIG ----------------
-FONT_PATH = "arialbd.ttf"
-try:
-    font = ImageFont.truetype(FONT_PATH, size=40)
-except OSError as e:
-    print("⚠️ Font load failed:", e)
-    font = ImageFont.load_default()
-
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+FONT_PATH = os.path.join(BASE_DIR, "arialbd.TTF")
 EXPORT_PDF = True
 DPI_FOR_PDF = 300
 GOOGLE_DRIVE_TEMPLATE = "https://drive.google.com/drive/folders/1T2iO8yMe5AWCk1UVTLIC9qWADr1JYqDd?usp=drive_link"
